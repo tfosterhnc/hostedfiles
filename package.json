@@ -2,5 +2,8 @@
   "type": "module",
   "dependencies": {
     "openai": "^4.27.0"
+  },
+  "scripts": {
+    "build": "echo 'skip build'"
   }
 }
