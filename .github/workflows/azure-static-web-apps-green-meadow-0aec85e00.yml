@@ -27,6 +27,6 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (custom domain PR comments)
           action: "upload"
-          app_location: "/"      # Where your index.html is
-          api_location: "/api"   # Where your Azure Functions folder is
-          output_location: "/"   # Where your built app is output to — here it’s the same root folder
+          app_location: "hostedfiles"      # Where your index.html is
+          api_location: "hostedfiles/api"   # Where your Azure Functions folder is
+          output_location: "hostedfiles"   # Where your built app is output to — here it’s the same root folder
