@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Healthy North Coast Smart Assistant</title>
+</head>
+<body>
+  <h1>Healthy North Coast Smart Assistant</h1>
+  <textarea id="input" rows="5" cols="50" placeholder="Ask a question..."></textarea>
+  <button onclick="sendMessage()">Send</button>
+  <pre id="output"></pre>
+
+  <script>
+    async function sendMessage() {
+      const input = document.getElementById('input').value;
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: input })
+      });
+      const data = await response.json();
+      document.getElementById('output').textContent = data.reply;
+    }
+  </script>
+</body>
+</html>
