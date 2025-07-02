@@ -13,7 +13,7 @@ sendBtn.addEventListener('click', async () => {
     body: JSON.stringify({ message: userText }),
   });
   const data = await response.json();
-  appendMessage('Assistant', data.response);
+  appendMessage('Assistant', data.reply);
 });
 
 // Add this block to listen for Enter key press:
